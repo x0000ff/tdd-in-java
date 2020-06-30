@@ -18,6 +18,10 @@ public class Greeter {
       return greeting();
     }
 
+    if (name.trim().isEmpty()) {
+      return greeting();
+    }
+
     return "Hello, " + name;
   }
 

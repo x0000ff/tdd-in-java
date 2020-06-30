@@ -37,4 +37,12 @@ public class GreeterTest {
         assertEquals(expected, actual);
     }
 
+    @Test
+    void greetingWhitespacedString() {
+        String actual = Greeter.greeting("\n\n\t\t\t\n");
+        String expected = "Hello, World";
+
+        assertEquals(expected, actual);
+    }
+
 }
