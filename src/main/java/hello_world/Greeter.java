@@ -18,9 +18,8 @@ public class Greeter {
   public static String greeting(Language language) {
 
     String world = (language == Language.SPANISH) ? WORLD_IN_SPANISH : WORLD_IN_ENGLISH;
-    String prefix = (language == Language.SPANISH) ? PREFIX_SPANISH : PREFIX_ENGLISH;
 
-    return prefix + world;
+    return prefixForLanguage(language) + world;
   }
 
   public static String greeting(String name, Language language) {
@@ -37,9 +36,11 @@ public class Greeter {
       return greeting(language);
     }
 
-    String prefix = (language == Language.SPANISH) ? PREFIX_SPANISH : PREFIX_ENGLISH;
+    return prefixForLanguage(language) + name;
+  }
 
-    return prefix + name;
+  private static String prefixForLanguage(Language language) {
+    return (language == Language.SPANISH) ? PREFIX_SPANISH : PREFIX_ENGLISH;
   }
 
 }
