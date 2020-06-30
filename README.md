@@ -69,3 +69,7 @@ $ gradle clean test
 
 If you see `BUILD SUCCESSFUL` - your tests passed.  
 But if you see `BUILD FAILED` - bad news, some tests failed.
+
+## 🚀 Let's begin...
+
+Follow this 🐰 ➡ [Workshop](workshop.md)
