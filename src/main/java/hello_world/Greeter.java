@@ -4,8 +4,10 @@ import java.util.Objects;
 
 public class Greeter {
 
+  static final String PREFIX = "Hello, ";
+
   public static String greeting() {
-    return "Hello, World";
+    return PREFIX + "World";
   }
 
   public static String greeting(String name) {
@@ -22,7 +24,7 @@ public class Greeter {
       return greeting();
     }
 
-    return "Hello, " + name;
+    return PREFIX + name;
   }
 
 }
