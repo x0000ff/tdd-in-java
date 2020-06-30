@@ -13,4 +13,20 @@ public class GreeterTest {
     assertEquals(expected, actual);
   }
 
+  @Test
+  void greetingWithName() {
+    String actual = Greeter.greeting("Kent");
+    String expected = "Hello, Kent";
+
+    assertEquals(expected, actual);
+  }
+
+  @Test
+  void greetingNull() {
+    String actual = Greeter.greeting(null);
+    String expected = "Hello, World";
+
+    assertEquals(expected, actual);
+  }
+
 }
