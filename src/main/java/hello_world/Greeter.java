@@ -4,13 +4,19 @@ import java.util.Objects;
 
 public class Greeter {
 
-  static final String PREFIX = "Hello, ";
-
-  public static String greeting() {
-    return PREFIX + "World";
+  public enum Language {
+    ENGLISH,
+    SPANISH
   }
 
-  public static String greeting(String name) {
+  static final String PREFIX_ENGLISH = "Hello, ";
+  static final String PREFIX_SPANISH = "Hola, ";
+
+  public static String greeting() {
+    return PREFIX_ENGLISH + "World";
+  }
+
+  public static String greeting(String name, Language language) {
 
     if (Objects.isNull(name)) {
       return greeting();
@@ -24,7 +30,9 @@ public class Greeter {
       return greeting();
     }
 
-    return PREFIX + name;
+    String prefix = (language == Language.SPANISH) ? PREFIX_SPANISH : PREFIX_ENGLISH;
+
+    return prefix + name;
   }
 
 }
