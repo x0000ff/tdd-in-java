@@ -29,4 +29,12 @@ public class GreeterTest {
     assertEquals(expected, actual);
   }
 
+    @Test
+    void greetingEmptyString() {
+        String actual = Greeter.greeting("");
+        String expected = "Hello, World";
+
+        assertEquals(expected, actual);
+    }
+
 }

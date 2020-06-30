@@ -14,6 +14,10 @@ public class Greeter {
       return greeting();
     }
 
+    if (name.isEmpty()) {
+      return greeting();
+    }
+
     return "Hello, " + name;
   }
 
