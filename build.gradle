@@ -20,3 +20,7 @@ dependencies {
 test {
     useJUnitPlatform()
 }
+
+apply plugin: 'application'
+
+mainClassName = 'hello_world.App'
